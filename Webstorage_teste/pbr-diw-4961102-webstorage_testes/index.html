@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSTORAGE - Testes</title>
+    <link rel="icon" href="assets/img/logo_pucminas.png" type="image/png">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/bootstrap.bundle.min.js" ></script>        
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="assets/img/image.png" class="img-fluid">   
+            </div>
+            <div class="col-9 text-center my-4 text-success">
+                <h1>Exercício Prático - WEBSTORAGE</h1>
+                <h3>Desenvolvimento de Interfaces WEB - Sistemas de Informação</h3>
+                <h3>Prof. Paulo Henrique Rodrigues</h3>                
+            </div>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="row bg-primary-subtle" style="padding: 20px;">
+            <h2 class="text-center"> Instruções</h2>
+            <p> Armazene as preferências do usuário relativas a tamanho da fonte, cores da fonte e do fundo, para o elemento que contém o nome do cientista da computação holandês Edsger Dijkstra. </p>
+            <p> Resolva essa atividade utilizando ambos os métodos <b>LocalStorage</b> e <b>SessionStorage</b>. </p>
+            <p> <b>localStorage:</b> Armazena os dados <b>sem prazo de expiração.</b> As informações persistem mesmo após o navegador ser fechado. </p>
+            <p> <b>sessionStorage:</b> Armazena os dados apenas durante a sessão atual do navegador. <b>Os dados são perdidos quando a aba ou janela do navegador é fechada.</b>            
+            <p> Ambas as funcionalidades utilizam os métodos: </p>
+            <p>
+                <ul>
+                    <li><span>setItem(<em>chave</em>,&nbsp;<em>valor</em>)</span><span>&nbsp;</span>— armazena uma chave, com o respectivo valor;</li>
+                    <li><span>getItem(<em>chave</em>)</span><span>&nbsp;</span>— recupera o valor de uma chave;</li>
+                    <li><span>removeItem(<em>chave</em>)</span><span>&nbsp;</span>— apaga uma chave do armazenamento (e seu valor);</li>
+                    <li><span>length</span><span>&nbsp;</span>— informa a quantidade de chaves armazenadas para este site;</li>
+                    <li><span>key(<em>n</em>)</span><span>&nbsp;</span>— retorna o nome da n-ésima chave;</li>
+                    <li><span>clear()</span><span>&nbsp;</span>— apaga todas as chaves e valores deste site.</li>
+                    <li><span>JSON.stringify()</span><span>&nbsp;</span>— converter um objeto JSON em String.</li>
+                    <li><span>JSON.parse()</span><span>&nbsp;</span>— converter uma string em um objeto JSON.</li>
+                </ul>
+            </p>                                    
+        </div>
+    </div>
+    <div class="container">
+        <div class="row my-4">
+            <h5> Preferências de Exibição</h5>
+            <div class="row">
+                <div class="col-2">
+                  <label for="cor_fonte" class="form-label">Cor da Fonte:</label> 
+                  <input type="color" class="form-control" id="cor_fonte">
+                </div>
+                <div class="col-2">
+                    <label for="cor_fundo" class="form-label">Cor do Fundo:</label> 
+                    <select class="form-control" id="cor_fundo">
+                        <option value="white">Claro</option>
+                        <option value="black">Escuro</option>
+                    </select>
+                  </div>
+                  <div class="col-2">
+                    <label for="tamanho_fonte" class="form-label">Tamanho da Fonte:</label> 
+                    <input type="number" class="form-control" id="tamanho_fonte" value="12" min="5" max="80">
+                  </div>
+                <div class="col-2">
+                    <br/>
+                    <button type="button" class="btn btn-primary" id="btnSalvar">Salvar</button>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="text-center" style="border: 2px dashed black;" id="conteudo">Edsger Dijkstra</div>                                    
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</html>
